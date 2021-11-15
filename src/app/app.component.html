@@ -1,0 +1,56 @@
+<dx-diagram #diagram id="diagram">
+        <dxi-custom-shape *ngFor="let item of myArray"
+            category="Application Services"
+            type="{{item[0]}}"
+            title="{{item[0]}}"
+            backgroundImageUrl= {{item[1]}}
+            [backgroundImageLeft]="backgroundImageLeft"
+            [backgroundImageTop]="backgroundImageTop"
+            [backgroundImageWidth]="backgroundImageWidth"
+            [backgroundImageHeight]="backgroundImageHeight"
+            [defaultWidth]="defaultWidth"
+            [defaultHeight]="defaultHeight"
+            defaultText="{{item[0]}}"
+            [allowEditText]="allowEditText"
+            [textLeft]="textLeft"
+            [textTop]="textTop"
+            [textWidth]="textWidth"
+            [textHeight]="textHeight">
+            <dxi-connection-point [x]="0.5" [y]="0"></dxi-connection-point>
+            <dxi-connection-point [x]="0.9" [y]="0.5"></dxi-connection-point>
+            <dxi-connection-point [x]="0.5" [y]="1"></dxi-connection-point>
+            <dxi-connection-point [x]="0.1" [y]="0.5"></dxi-connection-point>
+        </dxi-custom-shape>
+    <dxo-main-toolbar [visible]="true">
+        <dxi-command name="undo"></dxi-command>
+        <dxi-command name="redo"></dxi-command>
+        <dxi-command name="separator"></dxi-command>
+        <dxi-command name="fontName"></dxi-command>
+        <dxi-command name="fontSize"></dxi-command>
+        <dxi-command name="separator"></dxi-command>
+        <dxi-command name="bold"></dxi-command>
+        <dxi-command name="italic"></dxi-command>
+        <dxi-command name="underline"></dxi-command>
+        <dxi-command name="separator"></dxi-command>
+        <dxi-command name="fontColor"></dxi-command>
+        <dxi-command name="lineColor"></dxi-command>
+        <dxi-command name="fillColor"></dxi-command>
+        <dxi-command name="separator"></dxi-command>
+      </dxo-main-toolbar>
+    <dxo-toolbox
+    visibility="visible"
+    [shapeIconsPerRow]="5"
+    [width]="300"
+    >
+    <dxi-group category="general" title="General" ></dxi-group>
+    <dxi-group
+      category="flowchart"
+      title="Flowchart"
+    ></dxi-group>
+        <dxi-group category="Application Services" title="Application Services"></dxi-group>
+        <dxi-group category="Compute and Networking" title="Compute and Networking"></dxi-group>
+        <dxi-group category="Database" title="Database"></dxi-group>
+        <dxi-group category="Deployment and Management" title="Deployment and Management"></dxi-group>
+    </dxo-toolbox>
+</dx-diagram>
+
