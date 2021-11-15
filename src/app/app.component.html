@@ -1,26 +1,27 @@
 <dx-diagram #diagram id="diagram">
         <dxi-custom-shape *ngFor="let item of myArray"
-            category="Application Services"
-            type="{{item[0]}}"
-            title="{{item[0]}}"
-            backgroundImageUrl= {{item[1]}}
-            [backgroundImageLeft]="backgroundImageLeft"
-            [backgroundImageTop]="backgroundImageTop"
-            [backgroundImageWidth]="backgroundImageWidth"
-            [backgroundImageHeight]="backgroundImageHeight"
-            [defaultWidth]="defaultWidth"
-            [defaultHeight]="defaultHeight"
-            defaultText="{{item[0]}}"
-            [allowEditText]="allowEditText"
-            [textLeft]="textLeft"
-            [textTop]="textTop"
-            [textWidth]="textWidth"
-            [textHeight]="textHeight">
-            <dxi-connection-point [x]="0.5" [y]="0"></dxi-connection-point>
-            <dxi-connection-point [x]="0.9" [y]="0.5"></dxi-connection-point>
-            <dxi-connection-point [x]="0.5" [y]="1"></dxi-connection-point>
-            <dxi-connection-point [x]="0.1" [y]="0.5"></dxi-connection-point>
-        </dxi-custom-shape>
+        category="Application Services"
+        type="{{item[0]}}"
+        title="{{item[0]}}"
+        backgroundImageUrl= {{item[1]}}
+        [backgroundImageLeft]="0.15"
+        [backgroundImageTop]="0"
+        [backgroundImageWidth]="0.7"
+        [backgroundImageHeight]="0.7"
+        [defaultWidth]="0.75"
+        [defaultHeight]="0.75"
+        defaultText="{{item[0]}}"
+        [allowEditText]="false"
+        [textLeft]="0"
+        [textTop]="0.7"
+        [textWidth]="1"
+        [textHeight]="0.3"
+      >
+        <dxi-connection-point [x]="0.5" [y]="0"></dxi-connection-point>
+        <dxi-connection-point [x]="0.9" [y]="0.5"></dxi-connection-point>
+        <dxi-connection-point [x]="0.5" [y]="1"></dxi-connection-point>
+        <dxi-connection-point [x]="0.1" [y]="0.5"></dxi-connection-point>
+      </dxi-custom-shape>
     <dxo-main-toolbar [visible]="true">
         <dxi-command name="undo"></dxi-command>
         <dxi-command name="redo"></dxi-command>
